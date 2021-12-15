@@ -25,4 +25,4 @@ app.get('/',(req,res)=>{
     res.send("ITs working");
 })
 
-app.listen(80,console.log("Running on 3131"))
+app.listen(process.env.PORT || 3131,console.log("Running on 3131"))
