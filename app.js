@@ -2,7 +2,6 @@ const express=require('express');
 const path=require('path')
 const app=express();
 const mysql=require('mysql');
-const req = require('express/lib/request');
 // const { Agent } = require('http');
 
 // app.use(express.static('client'))
@@ -26,4 +25,4 @@ app.get('/',(req,res)=>{
     res.send("ITs working");
 })
 
-app.listen(3131,console.log("Running on 3131"))
+app.listen(80,console.log("Running on 3131"))
