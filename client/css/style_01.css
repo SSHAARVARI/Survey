@@ -26,9 +26,7 @@ h1 {
     padding: 1em;
     color: white;
 }
-.logo{
-    
-}
+
 .logo i{
     text-decoration: none;
     color: white;
@@ -133,7 +131,7 @@ h1 {
     border-radius: 4px;
     cursor: pointer;
 }
-
+/* low aaa lti low p[wming jumper wire+suit + AC-130 + 49fjm-+fOzimo at j   */
 .email-btn:active{
     background-color: orange;
 }
@@ -159,7 +157,7 @@ footer a{
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  /* overflow: auto; Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,.6); /* Black w/ opacity */
 }

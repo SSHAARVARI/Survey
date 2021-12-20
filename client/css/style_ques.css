@@ -1,0 +1,75 @@
+#sec4{
+    /* background-color: yellow; */
+    background-color: rgb(101, 190, 206);
+}
+
+.ques-cont{
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+}
+.ques-block{
+    /* border: 1px solid green; */
+    border-radius: 6px;
+    background-color: white;
+    padding: .5em;
+}
+.ques{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: .8em;
+    background-color: greenyellow;
+}
+.ans{
+    width: 90%;
+    /* border: 1px solid green; */
+    padding: 1em;
+}
+.anss{
+    margin: 1em;
+}
+.ans-opts{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(92, 91, 91);
+    
+    padding: 1em;
+    margin-top: .1em;
+    border-radius: 5px;
+
+
+}
+.ans-opts:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+.ans-opts:active{
+    background-color: rgb(187, 186, 186);
+    cursor: pointer;
+}
+.sbmt{
+    background-color: rgb(255, 165, 0,.5);
+    cursor: default;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 1em;
+}
+.sbmt:active{
+    background-color: black;
+    color: white;
+
+}
+
+
+.sss{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(247, 106, 55);
+    padding: 1em;
+    width: 50%;
+    margin: auto;
+    
+    margin-top: 1em;
+}

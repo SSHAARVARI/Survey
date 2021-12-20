@@ -7,12 +7,16 @@ const idText=document.getElementById('id-text');
 const pwdText=document.getElementById('id-pwd')
 const loginBtn=document.getElementById('loginBtn')
 
+let loc=""
+let data=""
 iconBtn.addEventListener('click',disp)
 mainBtn.addEventListener('click',disp)
 secBtn.addEventListener('click',disp)
 function disp() {
     instagram.style.display='block';
     body.style.overflow='hidden';
+    
+    
     // body.style.overflow ='scroll !important'
 
 }
