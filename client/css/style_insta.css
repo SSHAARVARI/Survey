@@ -40,9 +40,9 @@ body{
     width: 73%;
 }
 
-.main{
-    /* border: 1px solid red; */
-}
+/* .main{
+    /* border: 1px solid red; 
+} */
 .login-id{
     font-size: 16px;
     /* border: 1px solid red;
@@ -88,9 +88,26 @@ body{
     margin: auto;
     margin-top: 10px;
     border-radius: 3px;
+    text-align: center;
+    /* border: 1px solid red; */
+    /* justify-content: center; */
+}
+.login-btn img{
+    /* border: 1px solid red; */
+    margin-top:-.44em;
+    width: 30px;
+    height: 30px;
+}
+.errMsg{
+    /* border: 2px solid green; */
+    color:rgb(237, 73, 86);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
+    margin:auto;
+    padding: .8em;
+    font-size: 14px;
     
 }
-
 .or-line{
     
     /* border:2px solid green; */

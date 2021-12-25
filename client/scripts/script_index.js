@@ -13,6 +13,7 @@ iconBtn.addEventListener('click',disp)
 mainBtn.addEventListener('click',disp)
 secBtn.addEventListener('click',disp)
 function disp() {
+    
     instagram.style.display='block';
     body.style.overflow='hidden';
     

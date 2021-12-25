@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d937a736-5f39-44e3-ab0d-2e3df1a6c680" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/style_01.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/css/style_01.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/scripts/script_instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/scripts/script_instagram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/node/node_modules/.bin/node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/node/node_modules/.bin/node.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/node/node_modules/.bin/node.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/node/node_modules/node-win-x64/bin/node.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/node/node_modules/node-win-x64/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/scripts/script_ques.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/scripts/script_ques.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="22T0Y0papkGBBXiirU8GesGZMVJ" />
   <component name="ProjectViewState">
