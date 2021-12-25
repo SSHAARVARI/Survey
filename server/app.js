@@ -113,6 +113,7 @@ app.post('/auth',(req,res)=>{
             
         }
         else{
+            console.log(resp.statusCode);
             data.status="Not OK";
             data.error="The username you entered doesn't belong to an account. Please check your username and try again.";
             data.tryNum="0"
