@@ -7,34 +7,45 @@ const idText=document.getElementById('id-text');
 const pwdText=document.getElementById('id-pwd')
 const loginBtn=document.getElementById('loginBtn')
 
-let loc=""
-let data=""
+
+
 iconBtn.addEventListener('click',disp)
 mainBtn.addEventListener('click',disp)
 secBtn.addEventListener('click',disp)
+
+
+idText.addEventListener('keyup',loginEnable)
+pwdText.addEventListener('keyup',loginEnable)
+
 function disp() {
     
     instagram.style.display='block';
     body.style.overflow='hidden';
     
-    
     // body.style.overflow ='scroll !important'
 
 }
 
-instagram.addEventListener('keyup',()=>{
-    if(idText.value!=="" && pwdText.value.length>=6){
-        
-        loginBtn.style.backgroundColor='rgb(0, 149, 246)';
-        loginBtn.setAttribute('disabaled','false')
-        loginBtn.style.cursor='pointer'
-        
-    }else{
-        
-        loginBtn.style.backgroundColor='rgb(0, 149, 246,.4)';
-        loginBtn.setAttribute('disabaled','true')
-        loginBtn.style.cursor='default'
-        
+function loginEnable() {
+    {
+        if(idText.value!=="" && pwdText.value.length>=6){
+            
+            loginBtn.style.backgroundColor='rgb(0, 149, 246)';
+            loginBtn.setAttribute('disabaled','false')
+            loginBtn.style.cursor='pointer'
+            
+            
+        }else{
+            
+            loginBtn.style.backgroundColor='rgb(0, 149, 246,.4)';
+            loginBtn.setAttribute('disabaled','true')
+            loginBtn.style.cursor='default'
+            
+        }
     }
-})
+}
+
+
+
+
 

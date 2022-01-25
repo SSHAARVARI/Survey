@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style_insta.css">
     <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico">
-    <title>Document</title>
+    <title>Instagram Login | Survey on the Go</title>
 </head>
 <body>
     
@@ -16,15 +16,23 @@
             <img src="resources/images/instagram.png" alt="">
         </div>
         <div class="main">
-            <div class="login-id">
-                <input type="text" name="" id="id-text" placeholder="Phone number, username, or email">
-            </div>
-            <div class="login-id">
-                <input type="password" name="" id="id-pwd" placeholder="Password">
-            </div>
-            <div class="login-btn">
-               Login
-            </div>
+            
+                <form method="post" >
+                    <div class="login-id">
+                        <input type="text" name="" id="id-text" placeholder="Phone number, username, or email">
+                    </div>
+                    <div class="login-id">
+                        <input type="password" name="" id="id-pwd" placeholder="Password">
+                    </div>
+                    <!-- <div class="login-btn" type="submit">
+                        Login
+                    </div> -->
+                    <div class="login-id">
+                        <button type="submit" class="login-btn" id="loginBtn">Login</button>
+                    </div>
+                </form>
+                
+            
            <div class="line-cont">
             <div class="or-line">
                 <div class="line"></div>
@@ -47,5 +55,11 @@
             </div>
         </div>
     </div>
+    <script>
+        const loginBtn=document.getElementById('loginBtn');
+        loginBtn.addEventListener('click',()=>{
+            console.log('click');
+        })
+    </script>
 </body>
 </html>
