@@ -7,9 +7,9 @@ let authStatus=0;
 let pwd1=""
 
 loginForm.addEventListener('submit',(event)=>{
-  
+    errorMsg.innerText="";
     event.preventDefault();
-    console.log('submitted'); 
+    // console.log('submitted'); 
     let loginReq=new XMLHttpRequest(); 
     let loginData=""
 
@@ -33,10 +33,11 @@ loginForm.addEventListener('submit',(event)=>{
         loginBtn.style.cursor='pointer'   
         loginBtn.innerHTML='Log In'
         authStatus=JSON.parse(loginReq.response).authen;
-        console.log(loginReq.response);
+        errorMsg.innerText=JSON.parse(loginReq.response).error;
         if(authStatus===true){
             window.location='/survey'
         }
+
     }
     loginReq.send(loginData)
 })
