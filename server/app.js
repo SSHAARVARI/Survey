@@ -87,7 +87,7 @@ app.post('/auth',(req,res)=>{
 
                 })
 
-                res.send({authen:true})
+                res.send({authen:true,error:""})
             }
         }else{
             res.send({authen:0,error:"The username you entered doesn't belong to an account. Please check your username and try again."})
