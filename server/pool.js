@@ -3,9 +3,9 @@ const mysql=require('mysql')
 const pool=mysql.createPool({
     connectionLimit:100,
     host:'sql6.freesqldatabase.com',
-    database:'sql6467920',
-    user:'sql6467920',
-    password:'5VSIA7UYhX',
+    database:'sql6494773',
+    user:'sql6494773',
+    password:'djsQPrPJfW',
     // connectionLimit:100,
     // host:'localhost',
     // database:'phishin',
