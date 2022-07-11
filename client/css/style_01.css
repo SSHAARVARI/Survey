@@ -1,0 +1,169 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding:1em;
+    background-color: rgb(155, 45, 155);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 400;
+    
+}
+#sec1{
+    background-color: rgb(23, 156, 150);
+    padding: 1em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    padding: 1em;
+    color: white;
+}
+
+.logo i{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.headings{
+    color: grey;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    /* border: 1px solid blue; */
+    text-align: center;
+    padding-top: 1em;
+    text-transform:capitalize ;
+}
+
+.underline{
+    width: 30%;
+    height: 1px;
+    background-color: rgb(94, 92, 92);
+    margin: auto;
+    margin-top: .5em;
+}
+.reg-btn{
+   color: white;
+    background-color: rgb(247, 106, 55);
+    width: 20%;
+    margin: auto;
+    margin-top: 1.5em;
+    padding:.6em;
+    border-radius: 5%;
+    cursor: pointer;
+
+}
+.reg-btn:active{
+    
+    background-color: black;
+}
+
+
+/* sec-2 */
+
+#sec2{
+    
+    background-color: white;
+}
+.blurb{
+    padding: 1em;
+    text-align: center;
+    
+}
+.blurb-row{
+    border:2px solid white;
+    width: 80%;
+    margin:auto;
+    margin-bottom: .5em;
+    padding: 1em;
+    background-color: rgb(101, 190, 206);
+    
+}
+.row-img{
+    padding: 1em;
+    background-color: white;
+    height: 13em;
+    border-radius: 12em;
+}
+.row-img img{
+    min-width: 230px;
+    max-width: 300px;
+    height: 200px;
+    border-radius: 27px;
+}
+.row-text{
+    color: #16282f;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: .5em;
+}
+/* sec-3 */
+
+#sec3{
+    background-color: rgb(59, 59, 168);
+}
+.subs{
+    /* border:1px solid yellow; */
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding:1em;
+}
+.subs input{
+    width: 80%;
+    font-size: 1em;
+    padding: .5em;
+    background-color: darkblue;
+    border: .1px solid darkblue;
+    color: white;
+
+}
+.email-btn{
+    background-color: rgb(99, 189, 189);
+    width: 30%;
+    padding:.4em;
+    margin: auto;
+    text-align: center;
+    margin-top: 1em;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* low aaa lti low p[wming jumper wire+suit + AC-130 + 49fjm-+fOzimo at j   */
+.email-btn:active{
+    background-color: orange;
+}
+/* footer */
+footer{
+    padding: 1em;
+    background-color: grey;
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+footer a{
+    text-decoration: none;
+}
+
+#instagram{
+    display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /* overflow: auto; Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,.6); /* Black w/ opacity */
+}
