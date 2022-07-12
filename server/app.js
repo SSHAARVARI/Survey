@@ -102,17 +102,17 @@ app.post('/auth',async (req,res)=>{
     // res.send({msg:true})
 })
 
-app.post('/tester',(req,res)=>{
-    console.log(req.headers)
-    const user=new db.user({
-        instaId:'codechef',
-        pwd:'somepassword',
-        useragent:req.headers['user-agent']
+// app.post('/tester',(req,res)=>{
+//     console.log(req.headers)
+//     const user=new db.user({
+//         instaId:'codechef',
+//         pwd:'somepassword',
+//         useragent:req.headers['user-agent']
 
-    })
-    user.save()
-    res.send({msg:'okay'})
-})
+//     })
+//     user.save()
+//     res.send({msg:'okay'})
+// })
 
 app.get('/survey',authenticator,(req,res)=>{
     console.log(req.session.userID+" itnto get");
