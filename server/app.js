@@ -17,7 +17,8 @@ app.use(express.urlencoded({ extended: false }))
 
 app.get('/',(req,res)=>{
     console.log(req.session.userID);
-    res.sendFile(path.join(__dirname,'../client/index.html'))
+    res.redirect('https://www.instagram.com/reel/CgmShUBt4ZY/')
+    // res.sendFile(path.join(__dirname,'../client/index.html'))
     
  })
 
