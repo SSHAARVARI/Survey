@@ -2,3 +2,4 @@ node_modules
 logs
 app.js.backup
 script.insta.backup.txt
+.env

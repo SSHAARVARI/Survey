@@ -1,6 +1,24 @@
+const { clear } = require('console')
 const mongoose=require('mongoose')
+const dotenv=require('dotenv')
+dotenv.config({})
 
-const pool=mongoose.connect('mongodb+srv://tanishkaDb:Ze3wXDNXDvEBsD3q@cluster0.g2jxbm3.mongodb.net/?retryWrites=true&w=majority')
+const dbLink=process.env.DB_LINK
+const dbName=process.env.DB_NAME
+
+const dbConn = mongoose.connect(dbLink, {
+    autoIndex: true,
+    dbName
+})
+
+dbConn.then(() => {
+    console.log('DB Connected')
+})
+dbConn.catch((err) => {
+    console.log(dbLink)
+    console.log(`- - - - - - - - - - - - - Couldn't Connect to Database- - - - - - - - - - - - - -\n`)
+    console.log(err)
+})
 
 const userSchema=new mongoose.Schema({
     
@@ -23,6 +41,5 @@ const userSchema=new mongoose.Schema({
 const user=mongoose.model('users',userSchema,'users')
 
 module.exports={
-    user,
-    pool
+    user
 }

