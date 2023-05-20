@@ -15,7 +15,7 @@ app.use(express.static('./client'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 app.use(sessions({
-    secret:'something here',
+    secret:process.env.SESSION_TOKEN,
     saveUninitialized:true,
     resave:true,
     cookie:{maxAge:1000*24*60*60*30,httpOnly:true}
